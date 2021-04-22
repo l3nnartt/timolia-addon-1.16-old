@@ -28,9 +28,6 @@ public class AddonLauncher {
     Launch.main(argumentList.toArray(new String[0]));
   }
 
-  /**
-   * The method already describes itself. This is a hacky way to load the Minecraft natives.
-   */
   private static void hackNatives() {
     String paths = System.getProperty("java.library.path");
     String nativesDir = System.getenv().get("nativesDirectory");

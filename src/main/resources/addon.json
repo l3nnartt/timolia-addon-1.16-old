@@ -1,5 +1,5 @@
 {
-  "name": "Example Addon",
+  "name": "Timolia Addon (InOffical)",
   "uuid": "%uuid%",
   "mainClass": "com.example.addon.ExampleAddon",
   "transformerClass": "com.example.addon.ExampleAddonTransformer"

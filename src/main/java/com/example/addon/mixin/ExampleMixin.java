@@ -11,7 +11,7 @@ public class ExampleMixin {
 
   @Inject(method = "runTick", at = @At("HEAD"))
   private void injectRunTick(CallbackInfo ci) {
-    System.out.println("Tick!");
+    //System.out.println("Tick!");
   }
 
 }

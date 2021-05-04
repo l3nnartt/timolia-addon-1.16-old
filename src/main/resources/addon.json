@@ -1,6 +1,10 @@
 {
-  "name": "Timolia Addon (InOffical)",
   "uuid": "%uuid%",
-  "mainClass": "com.example.addon.ExampleAddon",
-  "transformerClass": "com.example.addon.ExampleAddonTransformer"
+  "name": "Timolia",
+  "mainClass": "com.github.lennart.TimoliaAddon",
+  "description": "This Addon adds some Server Support Features for Timolia.de",
+  "version": 1,
+  "author": "L3nnart_, TryAnixx",
+  "category": 3,
+  "icon": "https://i.imgur.com/NkFEsHW.png"
 }

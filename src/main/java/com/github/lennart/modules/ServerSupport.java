@@ -1,5 +1,6 @@
 package com.github.lennart.modules;
 
+import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.gui.screen.overlay.PlayerTabListOverlayEvent;
 import net.labymod.ingamegui.moduletypes.ColoredTextModule;
 import net.labymod.servermanager.ChatDisplayAction;
@@ -45,10 +46,11 @@ public class ServerSupport extends Server {
         }
     }
 
-    @Override
+    @Subscribe
     public void onJoin(ServerData serverData) {
     }
 
+    @Subscribe
     public ChatDisplayAction handleChatMessage(String clean, String formatted) {
         if (formatted.contains("1vs1") && formatted.contains("»")) {
             if (formatted.contains("Kit") && formatted.contains("Einstellungen")) {
@@ -81,12 +83,11 @@ public class ServerSupport extends Server {
         return kit;
     }
 
-    @Override
+    @Subscribe
     public void handlePayloadMessage(String s, PacketBuffer packetBuffer) throws Exception {
-
     }
 
-    @Override
+    @Subscribe
     public void handleTabInfoMessage(PlayerTabListOverlayEvent.Type type, String s, String s1) throws Exception {
         if (s1.contains("Du spielst auf")) {
             String[] servername = s1.split("§6");
@@ -94,15 +95,6 @@ public class ServerSupport extends Server {
             serveroutput = serveroutput.substring(0,serveroutput.length()-4);
             latestServer = serveroutput;
         }
-        System.out.println(s);
-        System.out.println(s1);
-    }
-
-
-
-    public void reset() {
-        super.reset();
-        //this.variable = null;
     }
 
     public void loadConfig() {
